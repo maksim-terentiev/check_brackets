@@ -1,6 +1,31 @@
 #include <stdio.h>
 #include "stack.h"
 
+char sym_bracket(char ch){
+	switch(ch){
+	case '(':
+		return ')';
+		break;
+	case ')':
+		return '(';
+		break;
+	case '[':
+		return ']';
+		break;
+	case ']':
+		return '[';
+		break;
+	case '{':
+		return '}';
+		break;
+	case '}':
+		return '{';
+		break;
+	default:
+		return '\0';
+	}
+}
+
 int main(){
 	char ch;
 
@@ -12,7 +37,7 @@ int main(){
 			if(r==0) return 1;
 		}
 		else if(ch==')' || ch=='}' || ch==']'){
-			if(is_stack_empty() || get_stack()!=ch){
+			if(is_stack_empty() || sym_bracket(get_stack())!=ch){
 				test=0;
 				break;
 			}else{
