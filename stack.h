@@ -2,8 +2,7 @@
 #define __stack_h__
 
 #include <stdio.h>
-#include <limits.h> // for INT_MAX
-#define STACK_SIZE INT_MAX
+#define STACK_SIZE 100000
 
 static char stack[STACK_SIZE];
 static int pointer=-1; // current head
