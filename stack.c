@@ -26,3 +26,7 @@ char pop_stack(){
 		return '\0';
 	}
 }
+
+int is_stack_empty(){
+	return pointer<0;
+}
