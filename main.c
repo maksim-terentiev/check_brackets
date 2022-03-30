@@ -12,7 +12,7 @@ int main(){
 			if(r==0) return 1;
 		}
 		else if(ch==')' || ch=='}' || ch==']'){
-			if(get_stack()!=ch){
+			if(is_stack_empty() || get_stack()!=ch){
 				test=0;
 				break;
 			}else{
